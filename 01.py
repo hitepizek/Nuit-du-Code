@@ -9,8 +9,10 @@ class App:
         pyxel.run(self.update, self.draw)
         
     def update(self):
-        self.x = (self.x + 1) % pyxel.width
-    
+        self.gauche = [[0 for _ in range(8)] for _ in range(16)]
+        self.droite = [[0 for _ in range(8)] for _ in range(16)]
+        
+        
     def draw(self):
         pyxel.cls(0)
         pyxel.rect(self.x, 0, 8, 8, 9)
@@ -18,5 +20,11 @@ class App:
         
 class Piece:
     def __init__(self, piece: int):
+        if piece == 0:
+            self.forme = [[1, 1, 1, 1]]
+            self.
+
+    def tourner(self):
         
+            
 App()
